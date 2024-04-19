@@ -2,7 +2,6 @@ export function convert(number: number): string {
   const romanNumerals: Array<string> = [""];
   for (var i = 0; i < number; i++) {
     if (i === 3) {
-      clearRomanNumerals(romanNumerals);
       setRomanNumeralsTo4(romanNumerals);
     } else {
       romanNumerals.push("I");
@@ -16,6 +15,7 @@ function clearRomanNumerals(romanNumerals: Array<string>) {
 }
 
 function setRomanNumeralsTo4(romanNumerals: Array<string>) {
+  clearRomanNumerals(romanNumerals);
   romanNumerals.push("I");
   romanNumerals.push("V");
 }
