@@ -1,12 +1,17 @@
 export function convert(number: number): string {
   const romanNumerals: Array<string> = [""];
-  for (var i = 0; i < number; i++) {
-    if (i === 4) {
+  for (var i = number; i > 0; i--) {
+    if (i > 5) {
+      setRomanNumeralsTo5(romanNumerals);
+      i = 1;
+    }
+    if (i === 5) {
       setRomanNumeralsTo5(romanNumerals);
       return romanNumerals.join("");
     }
-    if (i === 3) {
+    if (i === 4) {
       setRomanNumeralsTo4(romanNumerals);
+      return romanNumerals.join("");
     } else {
       romanNumerals.push("I");
     }
@@ -28,3 +33,5 @@ function setRomanNumeralsTo5(romanNumerals: Array<string>) {
   clearRomanNumerals(romanNumerals);
   romanNumerals.push("V");
 }
+
+console.log(convert(3));
