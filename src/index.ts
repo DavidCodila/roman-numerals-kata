@@ -2,14 +2,20 @@ export function convert(number: number): string {
   const romanNumerals: Array<string> = [""];
   for (var i = 0; i < number; i++) {
     if (i === 3) {
-      for (var j = 0; j < i; j++) {
-        romanNumerals.pop();
-      }
-      romanNumerals.push("I");
-      romanNumerals.push("V");
+      clearRomanNumerals(romanNumerals);
+      setRomanNumeralsTo4(romanNumerals);
     } else {
       romanNumerals.push("I");
     }
   }
   return romanNumerals.join("");
+}
+
+function clearRomanNumerals(romanNumerals: Array<string>) {
+  romanNumerals.splice(0, romanNumerals.length);
+}
+
+function setRomanNumeralsTo4(romanNumerals: Array<string>) {
+  romanNumerals.push("I");
+  romanNumerals.push("V");
 }
