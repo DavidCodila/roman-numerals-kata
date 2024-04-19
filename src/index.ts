@@ -1,1 +1,3 @@
-console.log("Hello via Bun!");
+export function convert(number: number): string {
+  return "";
+}
