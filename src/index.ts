@@ -3,15 +3,13 @@ export function convert(number: number): string {
   for (var i = number; i > 0; i--) {
     if (i > 5) {
       setRomanNumeralsTo5(romanNumerals);
-      i = i - 5;
-    }
-    if (i === 5) {
+      i = i - 4;
+    } else if (i === 5) {
       setRomanNumeralsTo5(romanNumerals);
-      return romanNumerals.join("");
-    }
-    if (i === 4) {
+      i = 0;
+    } else if (i === 4) {
       setRomanNumeralsTo4(romanNumerals);
-      return romanNumerals.join("");
+      i = 0;
     } else {
       romanNumerals.push("I");
     }
@@ -27,3 +25,5 @@ function setRomanNumeralsTo4(romanNumerals: Array<string>) {
 function setRomanNumeralsTo5(romanNumerals: Array<string>) {
   romanNumerals.push("V");
 }
+
+convert(6);
