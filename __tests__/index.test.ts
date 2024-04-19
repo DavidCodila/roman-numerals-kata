@@ -24,3 +24,7 @@ test("5 to V test", () => {
 test("6 to VI test", () => {
   expect(convert(6)).toEqual("VI");
 });
+
+test("7 to VII test", () => {
+  expect(convert(7)).toEqual("VII");
+});
