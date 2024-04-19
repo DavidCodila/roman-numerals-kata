@@ -28,3 +28,11 @@ test("6 to VI test", () => {
 test("7 to VII test", () => {
   expect(convert(7)).toEqual("VII");
 });
+
+test("8 to VIII test", () => {
+  expect(convert(8)).toEqual("VIII");
+});
+
+test("9 to IX test", () => {
+  expect(convert(8)).toEqual("IX");
+});
