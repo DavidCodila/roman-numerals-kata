@@ -6,5 +6,9 @@ test("1 to I test", () => {
 });
 
 test("2 to II test", () => {
-  expect(convert(1)).toEqual("I");
+  expect(convert(2)).toEqual("II");
+});
+
+test("3 to III test", () => {
+  expect(convert(3)).toEqual("III");
 });
