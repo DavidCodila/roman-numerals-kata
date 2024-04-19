@@ -1,7 +1,10 @@
 export function convert(number: number): string {
   const romanNumerals: Array<string> = [""];
   for (var i = number; i > 0; i--) {
-    if (i > 5) {
+    if (i === 9) {
+      setRomanNumeralsTo9(romanNumerals);
+      i = 0;
+    } else if (i > 5) {
       setRomanNumeralsTo5(romanNumerals);
       i = i - 4;
     } else if (i === 5) {
@@ -26,4 +29,9 @@ function setRomanNumeralsTo5(romanNumerals: Array<string>) {
   romanNumerals.push("V");
 }
 
-convert(6);
+function setRomanNumeralsTo9(romanNumerals: Array<string>) {
+  romanNumerals.push("I");
+  romanNumerals.push("X");
+}
+
+convert(9);
