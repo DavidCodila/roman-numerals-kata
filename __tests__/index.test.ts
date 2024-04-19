@@ -12,3 +12,7 @@ test("2 to II test", () => {
 test("3 to III test", () => {
   expect(convert(3)).toEqual("III");
 });
+
+test("4 to IV test", () => {
+  expect(convert(4)).toEqual("IV");
+});
