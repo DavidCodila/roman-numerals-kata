@@ -20,3 +20,7 @@ test("4 to IV test", () => {
 test("5 to V test", () => {
   expect(convert(5)).toEqual("V");
 });
+
+test("6 to VI test", () => {
+  expect(convert(6)).toEqual("VI");
+});
