@@ -19,18 +19,11 @@ export function convert(number: number): string {
   return romanNumerals.join("");
 }
 
-function clearRomanNumerals(romanNumerals: Array<string>) {
-  romanNumerals.splice(0, romanNumerals.length);
-}
-
 function setRomanNumeralsTo4(romanNumerals: Array<string>) {
   romanNumerals.push("I");
   romanNumerals.push("V");
 }
 
 function setRomanNumeralsTo5(romanNumerals: Array<string>) {
-  clearRomanNumerals(romanNumerals);
   romanNumerals.push("V");
 }
-
-console.log(convert(3));
