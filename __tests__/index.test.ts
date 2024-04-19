@@ -40,3 +40,7 @@ test("9 to IX test", () => {
 test("10 to X test", () => {
   expect(convert(10)).toEqual("X");
 });
+
+test("11 to XI test", () => {
+  expect(convert(11)).toEqual("XI");
+});
